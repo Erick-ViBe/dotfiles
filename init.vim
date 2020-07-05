@@ -84,12 +84,17 @@ let mapleader=" "
 
 "Tag List
 nmap <Leader>l :Tlist<CR>
+let Tlist_Close_On_Select = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
 
 "ShortCuts
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
-nmap <Leader>qw :wq<CR>
+nmap <Leader>qw :wq<Enter>
 nmap <Leader>ep :!python
+nmap <Leader>a A
+nmap <Leader>gg G
+nmap <Leader>5 %
 nmap ff $
 imap jj <Esc>
 imap ñ <down>
