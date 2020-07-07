@@ -24,10 +24,10 @@ Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/taglist.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -61,27 +61,6 @@ nmap <Leader>f :BLines<CR>
 "Leader key
 let mapleader=" "
 
-"Autocompletion
-    " Disable autocompletion (using deoplete instead)
-    let g:jedi#completions_enabled = 0
-    " needed so deoplete can auto select the first suggestion
-    set completeopt+=noinsert
-    " comment this line to enable autocompletion preview window
-    " (displays documentation related to the selected completion option)
-    " disabled by default because preview makes the window flicker
-    set completeopt-=preview
-    " Use deoplete.
-    let g:deoplete#enable_at_startup = 1
-    call deoplete#custom#option({
-    \   'ignore_case': v:true,
-    \   'smart_case': v:true,
-    \})
-    " complete with words from any opened file
-    let g:context_filetype#same_filetypes = {}
-    let g:context_filetype#same_filetypes._ = '_'
-    " Error supouse
-    let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
-
 "Tag List
 nmap <Leader>l :Tlist<CR>
 let Tlist_Close_On_Select = 1
@@ -90,9 +69,10 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 "ShortCuts
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
-nmap <Leader>qw :wq<Enter>
+nmap <Leader>zz :wq<Enter>
 nmap <Leader>ep :!python
 nmap <Leader>a A
+nmap <Leader>i I
 nmap <Leader>gg G
 nmap <Leader>5 %
 nmap ff $
