@@ -1,5 +1,15 @@
 {
-    "python.linting.enabled": false,
-    "python.autoComplete.addBrackets": true,
-    "suggest.noselect": false
+    "suggest.noselect": false,
+    "javascript.suggest.enabled": false,
+    "javascript.validate.enable": false,
+    "jedi.startupMessage": false,
+    "jedi.completion.disableSnippets": true,
+    "vetur.format.enable": false,
+    "clangd.disableSnippetCompletion": true,
+    "coc.preferences.snippets.enable": true,
+    "snippets.extends": {
+        "python": ["django"],
+        "html": ["htmldjango"]
+    },
+    "clangd.path": "/home/erick/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd"
 }
