@@ -6,6 +6,7 @@
     "jedi.completion.disableSnippets": true,
     "vetur.format.enable": false,
     "clangd.disableSnippetCompletion": true,
+    "clangd.enabled": false,
     "coc.preferences.snippets.enable": true,
     "snippets.extends": {
         "python": ["django"],
