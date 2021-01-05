@@ -143,5 +143,3 @@ imap 88 (
 imap 99 )
 imap 00 =
 imap << >
-imap .. :
-imap ,, ;
