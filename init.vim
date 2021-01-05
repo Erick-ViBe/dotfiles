@@ -136,7 +136,6 @@ imap ñ <down>
 imap ´ <End>
 imap f<Enter> <End>
 imap -- _
-imap 22 "
 imap 33 #
 imap 44 $
 imap 77 /
