@@ -8,9 +8,6 @@ set relativenumber
 set noshowmode
 set clipboard=unnamedplus
 
-"Leader key
-let mapleader=" "
-
 call plug#begin('~/.config/nvim/plugged')
 
 "Temas
@@ -23,7 +20,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-python/python-syntax'
 
 "IDE
-Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -34,7 +30,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-scripts/taglist.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
 Plug 'Yggdroot/indentLine'
@@ -45,67 +40,63 @@ Plug 'psliwka/vim-smoothie'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'turbio/bracey.vim'
 Plug 'kevinhwang91/rnvimr'
-
-"Problems
-"Plug 'frazrepo/vim-rainbow'
+Plug 'jdhao/better-escape.vim'
+Plug 'Jorengarenar/vim-MvVis'
+Plug 'voldikss/vim-floaterm'
+Plug 'skamsie/vim-lineletters'
 
 call plug#end()
 
 "Themes
     "Gruvbox
-    "colorscheme gruvbox
-    "let g:gruvbox_contrast_dark = "hard"
+    colorscheme gruvbox
+    let g:gruvbox_contrast_dark = "hard"
 
     "One Half
     "colorscheme onehalfdark
 
     "Monokai Tasty
-    colorscheme vim-monokai-tasty
+    "colorscheme vim-monokai-tasty
+
+"Leader key
+let mapleader=" "
 
 "Syntax
 let g:python_highlight_all = 1
 
+"CloseTag
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.tsx'
+
+"Bracey
+"let g:
+
 "EasyMotion
-nmap <Leader>s <Plug>(easymotion-s2)
+map <Leader>s <Plug>LineLetters
 
 "NerdTree
-nmap <Leader>t :w<Enter>:NERDTreeFind<CR>
+nmap <C-t> :w<Enter>:NERDTreeFind<CR>
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
-
-"VimRainbow
-"Problem with syntax of html
-"let g:rainbow_active = 1
 
 "Lightline
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
       \ 'active': {
       \   'right': [ [ 'lineinfo' ],
-      \              [ 'percent' ],
+      \              [ 'kitestatus' ],
       \              [ 'filetype' ] ]
+      \ },
+      \ 'component_function': {
+      \   'kitestatus': 'kite#statusline'
       \ },
       \ }
 
+
 "Fzf general code finder in current file mapping
-nmap <Leader>f :BLines<CR>
+nmap <C-f> :BLines<CR>
 
 "GoTo definition
 nmap gd :w<Enter> <Plug>(coc-definition)
-
-"Leader key
-let mapleader=" "
-
-"Tag List
-nmap <Leader>l :Tlist<CR>
-let Tlist_Close_On_Select = 1
-let Tlist_GainFocus_On_ToggleOpen = 1
-
-"Snippets
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Make Ranger to be hidden after picking a file
 let g:rnvimr_enable_picker = 1
@@ -115,31 +106,32 @@ augroup FileTypeSpecificAutocommands
     autocmd FileType c set tabstop=4 shiftwidth=4
 augroup END
 
+" use jj to escape insert mode.
+let g:better_escape_shortcut = 'jj'
+let g:better_escape_interval = 225
+
 "Run C++ Code
-nnoremap <C-g> :w <Enter> :!g++ %<Enter> :!./a.out<Enter>
+nnoremap <Leader>g :w <Enter> :!g++ %<Enter> :!./a.out<Enter>
+
+"Run JavaScript Code
+"nnoremap <C-x> :w <Enter> :!node %<Enter>
+nnoremap <C-x> :w <Enter> :!deno run %<Enter>
+
+"Floaterm
+let g:floaterm_keymap_toggle = '<C-y>'
+
 
 "ShortCuts
-nmap <Leader>w :w<CR>
-nmap <Leader>q :q<CR>
-nmap <Leader>zz :wq<Enter>
+nmap <C-w> :w<CR>
+nmap <C-q> :q<CR>
+nmap <C-s> :wq<CR>
 nmap <Leader>a A
 nmap <Leader>i I
-nmap <Leader>gg G
-nmap <Leader>5 %
+nmap <C-g> G
+map <C-e> <plug>NERDCommenterToggle
 nmap <Leader>r :w <Enter> :Files <Enter>
 nmap <Leader>n :RnvimrToggle <Enter>
 nmap <TAB> :w <Enter> :tabn <Enter>
 nmap <Leader>v V
 map ff $
-imap jj <Esc>
-imap ñ <down>
-imap ´ <End>
 imap f<Enter> <End>
-imap -- _
-imap 33 #
-imap 44 $
-imap 77 /
-imap 88 (
-imap 99 )
-imap 00 =
-imap << >
