@@ -19,7 +19,7 @@ Plug 'patstockwell/vim-monokai-tasty'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-python/python-syntax'
 
-"IDE
+"IDES
 Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
