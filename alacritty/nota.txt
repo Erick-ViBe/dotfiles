@@ -1,2 +1,0 @@
-config de alacritty 
-no olvidar el font
