@@ -17,14 +17,20 @@ map ff $
 imap f<Enter> <End>
 
 "Run C++ Code
-nnoremap <Leader>g :w <Enter> :!g++ %<Enter> :!./a.out<Enter>
+"nnoremap <Leader>g :w <Enter> :!g++ %<Enter> :!./a.out<Enter>
 
 "Run JavaScript Code
 "nnoremap <C-x> :w <Enter> :!node %<Enter>
-nnoremap <C-x> :w <Enter> :!deno run %<Enter>
+"nnoremap <C-x> :w <Enter> :!deno run %<Enter>
+
+"Run Python Code
+nnoremap <C-p> <Esc>:w<CR>:!clear;python %<CR>
 
 "Fzf general code finder in current file mapping
 nmap <C-f> :BLines<CR>
+
+"Fzf finder in all files
+nmap <Leader>f :FZF<CR>!^node_modules 
 
 "GoTo definition Coc
 nmap gd :w<Enter> <Plug>(coc-definition)

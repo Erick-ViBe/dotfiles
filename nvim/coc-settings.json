@@ -1,7 +1,8 @@
 {
     "suggest.noselect": false,
     "jedi.startupMessage": false,
-    "latex.build.onSave": true,
-    "clangd.path": "/home/erickvibe/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
-    /*"jedi.completion.disableSnippets": true*/
+    "emmet.includeLanguages": {"vue-html": "html", "javascript": "javascriptreact", "htmldjango": "html"}
+    //"emmet.showExpandedAbbreviation": "always"
+    //"jedi.completion.disableSnippets": true
+    //"clangd.path": "/home/erickvibe/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
 }
