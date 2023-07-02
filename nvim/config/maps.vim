@@ -15,6 +15,8 @@ nmap <TAB> :w <Enter> :tabn <Enter>
 nmap <Leader>v V
 map ff $
 imap f<Enter> <End>
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 
 "Run C++ Code
 "nnoremap <Leader>g :w <Enter> :!g++ %<Enter> :!./a.out<Enter>
