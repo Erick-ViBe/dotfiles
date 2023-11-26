@@ -12,6 +12,7 @@ set noshowmode
 set clipboard=unnamedplus
 set mouse=
 set nofixendofline
+set encoding=UTF-8
 
 augroup FileTypeSpecificAutocommands
     autocmd FileType cpp set tabstop=4 shiftwidth=4

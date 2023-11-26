@@ -36,6 +36,8 @@ Plug 'michaelb/sniprun', {'do': 'sh ./install.sh'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'ThePrimeagen/harpoon'
 Plug 'easymotion/vim-easymotion'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
 
 "Database Manager
 "Plug 'tpope/vim-dadbod'
@@ -43,8 +45,6 @@ Plug 'easymotion/vim-easymotion'
 
 " Plugins on standby
 "Plug 'mfussenegger/nvim-dap'
-"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-"Plug 'ryanoasis/vim-devicons'
 "Plug 'lervag/vimtex'
 "Plug 'Konfekt/FastFold'
 "Plug 'matze/vim-tex-fold'
