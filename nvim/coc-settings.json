@@ -2,5 +2,8 @@
     "suggest.noselect": false,
     "jedi.startupMessage": false,
     "emmet.includeLanguages": {"vue-html": "html", "javascript": "javascriptreact", "htmldjango": "html"},
-    "emmet.showExpandedAbbreviation": "always"
+    "emmet.showExpandedAbbreviation": "always",
+    "rust-analyzer.enable": true,
+    "eslint.enable": true
+    //"eslint.autoFixOnSave": true
 }

@@ -9,8 +9,6 @@ nmap <Leader>a A
 nmap <Leader>i I
 nmap <C-g> G
 map <C-e> <plug>NERDCommenterToggle
-nmap <Leader>r :w <Enter> :Files <Enter>
-nmap <Leader>n :RnvimrToggle <Enter>
 nmap <TAB> :w <Enter> :tabn <Enter>
 nmap <Leader>v V
 map ff $
@@ -34,11 +32,32 @@ nmap <C-f> :BLines<CR>
 "Fzf finder in all files
 nmap <Leader>f :FZF<CR>!^node_modules 
 
+"Fzf grep in current directory
+nmap <Leader>g :RG<CR>
+
 "GoTo definition Coc
 nmap gd :w<Enter> <Plug>(coc-definition)
+nmap gr :w<Enter> <Plug>(coc-references)
+nmap gi :w<Enter> <Plug>(coc-implementation)
 
 "NerdTree
 nmap <C-t> :w<Enter>:NERDTreeFind<CR>
 
 "EasyMotion
 map <Leader>s <Plug>LineLetters
+map s <Plug>(easymotion-s2)
+
+"Camel Case Motion
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+sunmap w
+sunmap b
+sunmap e
+
+"Snip Run
+vmap r <Plug>SnipRun
+
+"Harpoon
+nmap <Leader>ma :lua require("harpoon.mark").add_file()<CR>
+nmap <Leader>mm :lua require("harpoon.ui").toggle_quick_menu()<CR>

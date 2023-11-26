@@ -18,12 +18,6 @@ let g:lightline = {
       \ },
       \ }
 
-" Make Ranger to be hidden after picking a file
-let g:rnvimr_enable_picker = 1
-
 " use jj to escape insert mode.
 let g:better_escape_shortcut = 'jj'
 let g:better_escape_interval = 225
-
-"Floaterm
-let g:floaterm_keymap_toggle = '<C-y>'
