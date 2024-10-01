@@ -21,3 +21,6 @@ let g:lightline = {
 " use jj to escape insert mode.
 let g:better_escape_shortcut = 'jj'
 let g:better_escape_interval = 225
+
+"Vista
+let g:vista_close_on_jump = 1

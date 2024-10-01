@@ -7,7 +7,7 @@
     "colorscheme onehalfdark
 
     "Monokai Tasty
-    "colorscheme vim-monokai-tasty
+    colorscheme vim-monokai-tasty
 
     "One dark
-    colorscheme onedark
+    "colorscheme onedark

@@ -33,7 +33,7 @@ nmap <C-f> :BLines<CR>
 nmap <Leader>f :FZF<CR>!^node_modules 
 
 "Fzf grep in current directory
-nmap <Leader>g :RG<CR>
+nmap <Leader>g :Rg<CR>
 
 "GoTo definition Coc
 nmap gd :w<Enter> <Plug>(coc-definition)

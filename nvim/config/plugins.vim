@@ -38,6 +38,7 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'easymotion/vim-easymotion'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
+Plug 'liuchengxu/vista.vim'
 
 "Database Manager
 "Plug 'tpope/vim-dadbod'
